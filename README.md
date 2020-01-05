@@ -74,15 +74,15 @@ Route路由，我写了三个，一个源页面，一个路径为hurun的页面�
 
 the_region = request.form["the_region_selected"]----这里的"the_region_selected"对应的是results2.html文档中的select下拉框中的选项；
 
-dfs = df.query("xx=='{}'".format(the_region))—xx即你想要筛选数据的总名称，与前面“regions_available_loaded”中的xx是一致的；<
+dfs = df.query("xx=='{}'".format(the_region))—xx即你想要筛选数据的总名称，与前面“regions_available_loaded”中的xx是一致的；
 
 fig = dfs.iplot(kind="bar", x="aa",y="bb",asFigure=True),aa和bb是x轴和y轴的数据名称，比如我自己x轴上写的是“company”即x 轴每个单位点代表的是各个公司，y轴写的是“profit”，即各个公司对应的收益；
 
 py.offline.plot(fig, filename="example1.html",auto_open=False)--plotly图像整体属性设置复制代码，example1则是放置代码的文件，这个HTML文档放在templates文件夹中，它也会自动生成一个与templates同级的文件，因而我就没有把它放在templates文件夹中。
 
-利用with语句打开文件（example1.html），调用plotly模块绘图，并将其通过the_plot_all传输到results2.html页面中.
+利用with语句打开文件（example1.html），调用plotly模块绘图，并将其通过the_plot_all传输到results2.html页面中
 
-@app.route('/render')web应用增加总结页面render.html。
+@app.route('/render')web应用增加总结页面render.html
 
 <h3> 总结感言: </h3>
 
