@@ -58,7 +58,7 @@
 
 **环境**：flask环境
 
-**安装模块**:pandas、plotly、cufflinks、pyecharts模块
+**安装模块**：pandas、plotly、cufflinks、pyecharts模块
 
 **导入csv数据文档**,pandas 大法读内容, 用dropna()丢缺失值, 用unique()取唯一值,使取值 不重覆
 
