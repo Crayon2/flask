@@ -48,8 +48,8 @@ def hu_run_select() -> 'html':
 
 @app.route('/render')
 def entry_page() -> 'html':
-    return render_template('render.html',
-                           the_title='Welcom to search4letters on the web')
+    return render_template('render.html'
+                           )
 
 
 if __name__ == '__main__':
