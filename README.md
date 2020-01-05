@@ -4,6 +4,8 @@
 
 > Pythonanywhere URL：[作者刘瑜鹏]( http://crayon3.pythonanywhere.com/)、[18级伙伴刘宇](http://liuyu18.pythonanywhere.com/)
 
+> 项目说明文档：[说明文档_URL]( https://github.com/wenjunmo/DataStory_Interactive-Visualization/blob/master/README.md)
+
 #### 本项目是与17级师兄莫文俊一起合作的web应用，主题为“世界500强公司折射的全球经济结构分析”，在flask环境下，导入pandas、plotly、cufflinks、pyecharts模块，实现了数据的筛选与图表的交互。
 
 ##### 下面是各个文档说明：
