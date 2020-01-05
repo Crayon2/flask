@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Final_Python</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts-wordcloud.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/world.js"></script>
+        <link href="../static/hf.css" rel="stylesheet"/>
+    
+</head>
+<body>
+<header>世界500强公司折射的全球经济结构</header>
+        <style>
+        .tab {
+            overflow: hidden;
+             background:linear-gradient(to right ,lightblue 60%, lightcyan);
+        }
+
+        .tab button {
+            background-color: lightblue;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, 'b1407afdc1db41e49d27bddce792765d')">bar_base</button>
+            <button class="tablinks" onclick="showChart(event, 'e0dd663899294df8b68668828b205608')">wordcloud_diamond</button>
+            <button class="tablinks" onclick="showChart(event, 'b6468fada12b419f8d8b575cab53c84c')">map_world</button>
+            <button class="tablinks" onclick="showChart(event, '7baf017363bd4ac496277c3f997a1e00')">table_base</button>
+    </div>
+
+    <div class="box">
+                <div id="b1407afdc1db41e49d27bddce792765d" class="chart-container" style="width:1200px; height:500px;"></div>
+    <script>
+        var chart_b1407afdc1db41e49d27bddce792765d = echarts.init(
+            document.getElementById('b1407afdc1db41e49d27bddce792765d'), 'white', {renderer: 'canvas'});
+        var option_b1407afdc1db41e49d27bddce792765d = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "red",
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "\u56fd\u5bb6",
+            "data": [
+                129,
+                121,
+                52,
+                31,
+                29,
+                16,
+                16,
+                14,
+                13,
+                11,
+                9,
+                8,
+                7,
+                7,
+                6,
+                4,
+                4,
+                4,
+                3,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u56fd\u5bb6"
+            ],
+            "selected": {
+                "\u56fd\u5bb6": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "axisLabel": {
+                "show": true,
+                "position": "top",
+                "rotate": 50,
+                "margin": 8
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "China",
+                "United States",
+                "Japan",
+                "France",
+                "Germany",
+                "Korea",
+                "United Kingdom",
+                "Switzerland",
+                "Canada",
+                "Holland",
+                "Spain",
+                "Brazil",
+                "India",
+                "Australia",
+                "Italy",
+                "Mexico",
+                "Russia",
+                "Ireland",
+                "Singapore",
+                "Saudi Arabia",
+                "Thailand",
+                "United Kingdom ",
+                "Sweden",
+                "Indonesia",
+                "Norway",
+                "Poland",
+                "Malaysia",
+                "Turkey",
+                "Finland",
+                "Denmark",
+                "Luxembourg",
+                "Belgium",
+                "Austria",
+                "The United Arab Emirates"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u4e16\u754c500\u5f3a\u6392\u540d",
+            "subtext": "2019\u5e74",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_b1407afdc1db41e49d27bddce792765d.setOption(option_b1407afdc1db41e49d27bddce792765d);
+    </script>
+                <div id="e0dd663899294df8b68668828b205608" class="chart-container" style="width:1200px; height:500px;"></div>
+    <script>
+        var chart_e0dd663899294df8b68668828b205608 = echarts.init(
+            document.getElementById('e0dd663899294df8b68668828b205608'), 'white', {renderer: 'canvas'});
+        var option_e0dd663899294df8b68668828b205608 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "wordCloud",
+            "name": "\u56fd\u5bb6",
+            "shape": "diamond",
+            "rotationRange": [
+                0,
+                0
+            ],
+            "rotationStep": 45,
+            "girdSize": 20,
+            "sizeRange": [
+                20,
+                100
+            ],
+            "data": [
+                {
+                    "name": "China",
+                    "value": 129,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(54,90,65)"
+                        }
+                    }
+                },
+                {
+                    "name": "United States",
+                    "value": 121,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(158,7,117)"
+                        }
+                    }
+                },
+                {
+                    "name": "Japan",
+                    "value": 52,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(0,50,132)"
+                        }
+                    }
+                },
+                {
+                    "name": "France",
+                    "value": 31,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(49,113,49)"
+                        }
+                    }
+                },
+                {
+                    "name": "Germany",
+                    "value": 29,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(13,26,57)"
+                        }
+                    }
+                },
+                {
+                    "name": "Korea",
+                    "value": 16,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(126,4,152)"
+                        }
+                    }
+                },
+                {
+                    "name": "United Kingdom",
+                    "value": 16,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(58,9,97)"
+                        }
+                    }
+                },
+                {
+                    "name": "Switzerland",
+                    "value": 14,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(71,37,6)"
+                        }
+                    }
+                },
+                {
+                    "name": "Canada",
+                    "value": 13,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(45,93,66)"
+                        }
+                    }
+                },
+                {
+                    "name": "Holland",
+                    "value": 11,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(109,102,43)"
+                        }
+                    }
+                },
+                {
+                    "name": "Spain",
+                    "value": 9,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(45,129,100)"
+                        }
+                    }
+                },
+                {
+                    "name": "Brazil",
+                    "value": 8,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(22,157,160)"
+                        }
+                    }
+                },
+                {
+                    "name": "India",
+                    "value": 7,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(34,37,90)"
+                        }
+                    }
+                },
+                {
+                    "name": "Australia",
+                    "value": 7,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(112,91,43)"
+                        }
+                    }
+                },
+                {
+                    "name": "Italy",
+                    "value": 6,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(128,103,2)"
+                        }
+                    }
+                },
+                {
+                    "name": "Mexico",
+                    "value": 4,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(95,14,113)"
+                        }
+                    }
+                },
+                {
+                    "name": "Russia",
+                    "value": 4,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(111,45,126)"
+                        }
+                    }
+                },
+                {
+                    "name": "Ireland",
+                    "value": 4,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(159,23,19)"
+                        }
+                    }
+                },
+                {
+                    "name": "Singapore",
+                    "value": 3,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(54,146,102)"
+                        }
+                    }
+                },
+                {
+                    "name": "Saudi Arabia",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(68,15,87)"
+                        }
+                    }
+                },
+                {
+                    "name": "Thailand",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(141,52,87)"
+                        }
+                    }
+                },
+                {
+                    "name": "United Kingdom ",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(158,113,99)"
+                        }
+                    }
+                },
+                {
+                    "name": "Sweden",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(68,128,128)"
+                        }
+                    }
+                },
+                {
+                    "name": "Indonesia",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(156,147,63)"
+                        }
+                    }
+                },
+                {
+                    "name": "Norway",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(122,1,35)"
+                        }
+                    }
+                },
+                {
+                    "name": "Poland",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(153,58,31)"
+                        }
+                    }
+                },
+                {
+                    "name": "Malaysia",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(125,32,71)"
+                        }
+                    }
+                },
+                {
+                    "name": "Turkey",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(125,140,93)"
+                        }
+                    }
+                },
+                {
+                    "name": "Finland",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(38,88,50)"
+                        }
+                    }
+                },
+                {
+                    "name": "Denmark",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(91,60,28)"
+                        }
+                    }
+                },
+                {
+                    "name": "Luxembourg",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(82,142,125)"
+                        }
+                    }
+                },
+                {
+                    "name": "Belgium",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(26,158,97)"
+                        }
+                    }
+                },
+                {
+                    "name": "Austria",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(131,144,57)"
+                        }
+                    }
+                },
+                {
+                    "name": "The United Arab Emirates",
+                    "value": 1,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(63,124,8)"
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "WordCloud-shape-diamond",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_e0dd663899294df8b68668828b205608.setOption(option_e0dd663899294df8b68668828b205608);
+    </script>
+                <div id="b6468fada12b419f8d8b575cab53c84c" class="chart-container" style="width:1200px; height:500px;"></div>
+    <script>
+        var chart_b6468fada12b419f8d8b575cab53c84c = echarts.init(
+            document.getElementById('b6468fada12b419f8d8b575cab53c84c'), 'white', {renderer: 'canvas'});
+        var option_b6468fada12b419f8d8b575cab53c84c = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "map",
+            "name": "\u4e16\u754c",
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "mapType": "world",
+            "data": [
+                {
+                    "name": "China",
+                    "value": 129
+                },
+                {
+                    "name": "United States",
+                    "value": 121
+                },
+                {
+                    "name": "Japan",
+                    "value": 52
+                },
+                {
+                    "name": "France",
+                    "value": 31
+                },
+                {
+                    "name": "Germany",
+                    "value": 29
+                },
+                {
+                    "name": "Korea",
+                    "value": 16
+                },
+                {
+                    "name": "United Kingdom",
+                    "value": 16
+                },
+                {
+                    "name": "Switzerland",
+                    "value": 14
+                },
+                {
+                    "name": "Canada",
+                    "value": 13
+                },
+                {
+                    "name": "Holland",
+                    "value": 11
+                },
+                {
+                    "name": "Spain",
+                    "value": 9
+                },
+                {
+                    "name": "Brazil",
+                    "value": 8
+                },
+                {
+                    "name": "India",
+                    "value": 7
+                },
+                {
+                    "name": "Australia",
+                    "value": 7
+                },
+                {
+                    "name": "Italy",
+                    "value": 6
+                },
+                {
+                    "name": "Mexico",
+                    "value": 4
+                },
+                {
+                    "name": "Russia",
+                    "value": 4
+                },
+                {
+                    "name": "Ireland",
+                    "value": 4
+                },
+                {
+                    "name": "Singapore",
+                    "value": 3
+                },
+                {
+                    "name": "Saudi Arabia",
+                    "value": 2
+                },
+                {
+                    "name": "Thailand",
+                    "value": 1
+                },
+                {
+                    "name": "United Kingdom ",
+                    "value": 1
+                },
+                {
+                    "name": "Sweden",
+                    "value": 1
+                },
+                {
+                    "name": "Indonesia",
+                    "value": 1
+                },
+                {
+                    "name": "Norway",
+                    "value": 1
+                },
+                {
+                    "name": "Poland",
+                    "value": 1
+                },
+                {
+                    "name": "Malaysia",
+                    "value": 1
+                },
+                {
+                    "name": "Turkey",
+                    "value": 1
+                },
+                {
+                    "name": "Finland",
+                    "value": 1
+                },
+                {
+                    "name": "Denmark",
+                    "value": 1
+                },
+                {
+                    "name": "Luxembourg",
+                    "value": 1
+                },
+                {
+                    "name": "Belgium",
+                    "value": 1
+                },
+                {
+                    "name": "Austria",
+                    "value": 1
+                },
+                {
+                    "name": "The United Arab Emirates",
+                    "value": 1
+                }
+            ],
+            "roam": true,
+            "zoom": 1,
+            "showLegendSymbol": true,
+            "emphasis": {},
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u4e16\u754c"
+            ],
+            "selected": {
+                "\u4e16\u754c": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "Map-\u4e16\u754c\u5730\u56fe",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "continuous",
+        "min": 0,
+        "max": 200,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "splitNumber": 5,
+        "orient": "vertical",
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140
+    }
+};
+        chart_b6468fada12b419f8d8b575cab53c84c.setOption(option_b6468fada12b419f8d8b575cab53c84c);
+    </script>
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="7baf017363bd4ac496277c3f997a1e00" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > Table</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <tr>
+        <th>City name</th>
+        <th>cnt</th>
+    </tr>
+    <tr>
+        <td>中国</td>
+        <td>129</td>
+    </tr>
+    <tr>
+        <td>美国</td>
+        <td>121</td>
+    </tr>
+    <tr>
+        <td>日本</td>
+        <td>52</td>
+    </tr>
+    <tr>
+        <td>法国</td>
+        <td>31</td>
+    </tr>
+    <tr>
+        <td>德国</td>
+        <td>29</td>
+    </tr>
+    <tr>
+        <td>英国</td>
+        <td>16</td>
+    </tr>
+    <tr>
+        <td>韩国</td>
+        <td>16</td>
+    </tr>
+    <tr>
+        <td>瑞士</td>
+        <td>14</td>
+    </tr>
+    <tr>
+        <td>加拿大</td>
+        <td>13</td>
+    </tr>
+    <tr>
+        <td>荷兰</td>
+        <td>11</td>
+    </tr>
+    <tr>
+        <td>西班牙</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td>巴西</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>印度</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>澳大利亚</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>意大利</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>墨西哥</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>爱尔兰</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>俄罗斯</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>新加坡</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>沙特阿拉伯</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>印度尼西亚	</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>卢森堡</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>土耳其</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>丹麦</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>马来西亚</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>奥地利</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>挪威</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>波兰</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>泰国</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>瑞典</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>芬兰</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>英国</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>阿拉伯联合酋长国</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>比利时</td>
+        <td>1</td>
+    </tr>
+</table>
+        </div>
+
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+<div class="as" >
+    <b>观察:</b>
+<p>2019年全世界500强上榜的中国公司在数量上首次超越美国,中国上榜企业 129 家，美国为 121 家。</p>
+<p>全球百强企业正在明显地向中美两个国家（尤其是中国）集中，全球 100 强企业的国家集聚度越来越高。</p>
+<b>结论:</b>
+    <p>从趋势上看，小国想要产生 “100 强” 或许会越来越难；而拥有较多 100 强企业的中国和美国，则很可能会产生更多的 100 强，</p>
+    <p>尤其是中国的势头强劲，增速远远超过美国。</p>
+
+</div>
+</body>
+</html>

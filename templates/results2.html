@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Final_Python</title>
+     <link href="../static/hf.css" rel="stylesheet"/>
+</head>
+<body>
+<header>世界500强公司折射的全球经济结构</header>
+<form method="POST" action="/hurun">
+    <select name="the_region_selected">
+        {% for item in the_select_region %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+<p><input value='Do it!' type='SUBMIT'></p>
+
+</form>
+<form method=['GET','POST'] action="/render">
+
+<p><input value='结论' type='SUBMIT'></p>
+</form>
+{{ the_plot_all|safe }}
+{{ the_res|safe }}
+
+
+</body>
+</html>
